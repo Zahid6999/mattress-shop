@@ -2,13 +2,13 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="bg-white  bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat  min-h-screen text-gray-900 flex pt-[10%] justify-center overflow-hidden">
+        <section className="bg-white  relative bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat  min-h-screen text-gray-900 flex pt-[10%] justify-center overflow-hidden">
   <div className="container px-4 text-center md:text-left">
     <div className="text-center ">
-      <h1 className="text-[#24231e]">
+      <h1 className="text-[var(--color-backgroundBody)]">
         Better Sleep, Better Living
       </h1>
-      <p className="mt-5  mb-16 text-[#0d0c22] ">
+      <p className="mt-5   mb-16 text-[#f5f4fb] ">
         25 years of German handmade mattresses now available in the USA <br /> 
         Experience a mattress made for everyBODY!
       </p>

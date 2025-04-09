@@ -39,7 +39,7 @@
   }
   
   .rv-button .rv-button-bottom span {
-    transform: rotate(12deg);
+    transform: rotate(13deg);
   }
   
   .rv-button:hover .rv-button-top {
@@ -61,7 +61,7 @@
   /* Variant: .rv-button-secondary */
   .rv-button-secondary .rv-button-top {
     background-color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--border-color);
     z-index: 10;
   }
   
@@ -91,7 +91,7 @@
   /* Variant: .rv-button-white */
   .rv-button-white .rv-button-top {
     background-color: var(--color-backgroundBody);
-    border: 1px solid transparent;
+    border: 1px solid var(--border-color);
     z-index: 10;
   }
   
