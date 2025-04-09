@@ -11,8 +11,8 @@ const features = [
   },
   {
     icon: '/images/logo/award-2.svg',
-    title: 'In-Home Trial Period',
-    description: 'All our product are suitable for allergic persons-asthmatics.',
+    title: 'Australian Quality Standard',
+    description: 'Our bedding ensures superior comfort and long-lasting performance.',
   },
   {
     icon: '/images/logo/award-3.svg',
@@ -41,12 +41,13 @@ const ProductQuality: FC = () => {
     <section className="bg-[#f7f9f9] pt-14 md:pt-16 lg:pt-[88px] xl:pt-[100px] pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
         <div className="container">
 
-      <div className=" flex items-center justify-around ">
+      <div className=" flex items-center gap-20 justify-around ">
         {/* Left Image */}
         <figure className='md:w-[40%]'>
           <Image
             src="/images/mattresse-shape.png"
             alt="Mattress"
+            className='w-full'
            width={540}
            height={399}
           />
@@ -72,7 +73,7 @@ const ProductQuality: FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold tracking-[0.024rem]
                   ">{item.title}</h3>
-                  <p className="text-sm text-black/80 mt-2 max-w-[250px]">{item.description}</p>
+                  <p className="text-sm text-black/80 mt-2 max-w-[255px]">{item.description}</p>
                 </div>
               </div>
             ))}
