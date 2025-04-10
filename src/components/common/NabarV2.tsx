@@ -69,7 +69,7 @@ export default function NavbarV2() {
       {/* Mobile Nav Menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 -translate-x-16 opacity-0'
         }`}
       >
         <ul className="flex flex-col space-y-4 mt-4 px-4 text-gray-900 font-medium">
