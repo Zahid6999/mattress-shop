@@ -11,9 +11,9 @@ export default function NavbarV2() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
     { name: 'Delivery', href: '/delivery' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
