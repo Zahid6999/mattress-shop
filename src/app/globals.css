@@ -10,6 +10,10 @@
   --border-color: #00000046;
 }
 
+@theme {
+  --color-dark-black: #141515;
+}
+
 @layer base {
   .container {
     @apply mx-auto max-lg:px-5 lg:px-[30px] xl:max-w-[1330px] xl:p-0;

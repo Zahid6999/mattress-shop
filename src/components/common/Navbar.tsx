@@ -13,7 +13,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="border-b border-b-stone-400 py-4">
+    <nav className="border-b border-b-stone-400 py-3">
       <div className="container">
         <div className="flex items-center justify-between">
           {/* logo  */}
@@ -57,7 +57,7 @@ export const Navbar = () => {
               <li key={index + 1}>
                 <Link
                   href={`/${item.toLowerCase() === 'home' ? '' : item.toLowerCase()}`}
-                  className="bg-[length:0%_100%] bg-left bg-no-repeat text-lg leading-snug transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)] hover:bg-[length:100%_100%]"
+                  className="bg-[length:0%_100%] bg-left bg-no-repeat text-base leading-snug transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)] hover:bg-[length:100%_100%]"
                   style={{
                     backgroundImage: 'linear-gradient(transparent calc(100% - 2px), #141515 2px)',
                   }}>
