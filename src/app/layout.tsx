@@ -1,12 +1,8 @@
-
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
-import NavbarV2 from "@/components/common/NabarV2";
-import Footer from "@/components/Footer";
-import "./globals.css";
-
+import NavbarV2 from '@/components/common/NabarV2'
+import Footer from '@/components/Footer'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -20,15 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
- 
-   return (
+  return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-[#EDF0F5]`}>
+      <body className={`${inter.className} bg-[#EDF0F5] antialiased`}>
         <NavbarV2 />
         <main>{children}</main>
         <Footer />
       </body>
     </html>
-  );
- 
+  )
 }

@@ -6,13 +6,13 @@
 :root {
   /* custom color  */
   --color-secondary: #000;
-  --color-backgroundBody: #EDF0F5;
+  --color-backgroundBody: #edf0f5;
   --border-color: #00000046;
-  
-  
-  --text-color:#181818b3;
-  
+  --text-color: #181818b3;
+}
 
+@theme {
+  --color-dark-black: #141515;
 }
 
 @layer base {
@@ -64,9 +64,6 @@
   a {
     @apply inline-block text-sm leading-[1.1] font-medium text-black dark:text-white;
   }
-
-
-
 }
 
 .stroke-gold {
