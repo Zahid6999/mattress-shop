@@ -7,9 +7,9 @@ import WhyChoose from "@/components/WhyChoose";
 const page = () => {
   return <>
   <Hero/>
+  <Portfolio/>
   <WhyChoose/>
   <ProductQuality/>
-  <Portfolio/>
   </>;
 };
 
