@@ -58,8 +58,8 @@ const page = () => {
                       <Image
                         src={item.image}
                         alt={item.name}
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                         className="object-cover object-center w-full h-full hover:scale-105 duration-200 ease-in transition-[scale] rounded-b-[12px]"
                       />
                     </figure>
