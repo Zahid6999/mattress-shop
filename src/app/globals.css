@@ -6,8 +6,13 @@
 :root {
   /* custom color  */
   --color-secondary: #000;
-  --color-backgroundBody: #fff;
+  --color-backgroundBody: #EDF0F5;
   --border-color: #00000046;
+  
+  
+  --text-color:#181818b3;
+  
+
 }
 
 @layer base {
@@ -15,7 +20,7 @@
     @apply mx-auto max-lg:px-5 lg:px-[30px] xl:max-w-[1330px] xl:p-0;
   }
   * {
-    @apply text-white;
+    @apply text-[#EDF0F5];
   }
   h1,
   h2,
@@ -59,6 +64,9 @@
   a {
     @apply inline-block text-sm leading-[1.1] font-medium text-black dark:text-white;
   }
+
+
+
 }
 
 .stroke-gold {
