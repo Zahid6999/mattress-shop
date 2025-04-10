@@ -40,8 +40,9 @@
 
   /* custom color  */
   --color-secondary: #000;
-  --color-backgroundBody: #fff;
+  --color-backgroundBody: #EDF0F5;
   --border-color: #00000046;
+  --text-color:#181818b3;
   
 }
 
@@ -128,7 +129,7 @@
   }
 
   * {
-    @apply text-white;
+    @apply text-[#EDF0F5];
   }
   h1,
   h2,
