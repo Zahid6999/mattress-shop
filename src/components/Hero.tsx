@@ -1,8 +1,7 @@
-import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="bg-white  relative bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat  min-h-screen text-gray-900 flex pt-[10%] justify-center overflow-hidden">
+        <section className="bg-white  relative bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat  min-h-screen text-gray-900 flex pt-[10%] justify-center overflow-hidden ">
   <div className="container px-4 text-center md:text-left">
     <div className="text-center ">
       <h1 className="text-[var(--color-backgroundBody)]">

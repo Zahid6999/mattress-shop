@@ -1,4 +1,5 @@
-import { Navbar } from '@/components/common/Navbar'
+import NavbarV2 from '@/components/common/NabarV2'
+import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -17,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <Navbar />
+      <body className={`${inter.className} bg-[#EDF0F5] antialiased`}>
+        <NavbarV2 />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
