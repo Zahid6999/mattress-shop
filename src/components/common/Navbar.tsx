@@ -1,248 +1,90 @@
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
-import brandLogo from "../../../public/images/logo/matress.png";
+'use client'
+import { Menu } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import BrandLogo from '../.../../../../public/images/logo/matress.png'
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+export const Navbar = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
 
-interface MenuItem {
-  title: string;
-  url: string;
-  description?: string;
-  icon?: React.ReactNode;
-  items?: MenuItem[];
-}
+  const handleShowMenu = () => {
+    setShowMobileMenu(!showMobileMenu)
+  }
 
-interface NavbarProps {
-  logo?: {
-    url: string;
-    src: string | StaticImageData;
-    alt: string;
-    title: string;
-  };
-  menu?: MenuItem[];
-  auth?: {
-    signup: {
-      title: string;
-      url: string;
-    };
-  };
-}
-
-const Navbar = ({
-  logo = {
-    url: "https://www.shadcnblocks.com",
-    src: brandLogo,
-    alt: "logo",
-    title: "Matress House",
-  },
-  menu = [
-    { title: "Home", url: "#" },
-    {
-      title: "Services",
-      url: "#",
-      items: [
-        {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
-    },
-
-    {
-      title: "Contact",
-      url: "#",
-    },
-  ],
-  auth = {
-    signup: { title: "See all services", url: "#" },
-  },
-}: NavbarProps) => {
   return (
-    <section className="py-4">
-      <div className="container mx-auto">
-        {/* Desktop Menu */}
-        <nav className="hidden justify-between lg:flex   ">
-          <div className="flex items-center gap-6">
-            {/* Logo */}
-            <Link href={logo.url} className="flex items-center gap-2">
-              <Image src={logo.src} className="size-16" alt={logo.alt} />
-              <span className="text-lg font-semibold tracking-tighter">
-                {logo.title}
-              </span>
-            </Link>
-            <div className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {menu.map((item) => renderMenuItem(item))}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
+    <nav className="border-b border-b-stone-400 py-4">
+      <div className="container">
+        <div className="flex justify-between">
+          {/* logo  */}
+          <Link href={'/'}>
+            <figure className="size-10 overflow-hidden">
+              <Image src={BrandLogo} alt="brand-logo" className="object-cover" />
+            </figure>
+          </Link>
+
+          <div className="relative flex items-center justify-center" onClick={handleShowMenu}>
+            <Menu className="stroke-[#141515]" />
+
+            {showMobileMenu && (
+              <ul className="absolute top-[90%] right-[10%] z-[999] w-[170px] space-y-5 rounded-lg border border-stone-400 bg-white p-4">
+                <li className="text-black">
+                  <Link href={'/services'}>Services</Link>
+                </li>
+                <li className="text-black">
+                  <Link href={'/contact'}>Contact</Link>
+                </li>
+                <li className="rounded-3xl bg-gray-600 px-3 py-1.5 text-sm">
+                  <Link href={'/services'} className="text-white">
+                    See all services
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
 
-          <Button asChild size="sm">
-            <Link href={auth.signup.url}>{auth.signup.title}</Link>
-          </Button>
-        </nav>
+          {/* nav links  */}
+          <ul className="hidden items-center gap-16 md:flex">
+            <li>
+              <Link
+                className="bg-[length:0%_100%] bg-left bg-no-repeat text-lg leading-snug transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)] hover:bg-[length:100%_100%]"
+                href={'/'}
+                style={{
+                  backgroundImage: 'linear-gradient(transparent calc(100% - 2px), #141515 2px)',
+                }}>
+                Home
+              </Link>
+            </li>
 
-        {/* Mobile Menu */}
-        <div className="block lg:hidden">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href={logo.url} className="flex items-center gap-2">
-              <Image src={logo.src} className="max-h-8" alt={logo.alt} />
+            <li>
+              <Link
+                className="bg-[length:0%_100%] bg-left bg-no-repeat text-lg leading-snug transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)] hover:bg-[length:100%_100%]"
+                href={'/services'}
+                style={{
+                  backgroundImage: 'linear-gradient(transparent calc(100% - 2px), #141515 2px)',
+                }}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="bg-[length:0%_100%] bg-left bg-no-repeat text-lg leading-snug transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)] hover:bg-[length:100%_100%]"
+                href={'/contact'}
+                style={{
+                  backgroundImage: 'linear-gradient(transparent calc(100% - 2px), #141515 2px)',
+                }}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+          {/* cta btn  */}
+          <div className="hidden rounded-lg bg-gray-600 px-5 py-2.5 md:block">
+            <Link href={'/services'} className="text-white">
+              See all services
             </Link>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
-                  <Menu className="size-4" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
-                <SheetHeader>
-                  <SheetTitle>
-                    <Link href={logo.url} className="flex items-center gap-2">
-                      <Image
-                        src={logo.src}
-                        className="max-h-8"
-                        alt={logo.alt}
-                      />
-                    </Link>
-                  </SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col gap-6 p-4">
-                  <Accordion
-                    type="single"
-                    collapsible
-                    className="flex w-full flex-col gap-4"
-                  >
-                    {menu.map((item) => renderMobileMenuItem(item))}
-                  </Accordion>
-
-                  <Button asChild>
-                    <Link href={auth.signup.url}>{auth.signup.title}</Link>
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
-
-const renderMenuItem = (item: MenuItem) => {
-  if (item.items) {
-    return (
-      <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-popover text-popover-foreground">
-          {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className="w-80">
-              <SubMenuLink item={subItem} />
-            </NavigationMenuLink>
-          ))}
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-    );
-  }
-
-  return (
-    <NavigationMenuItem key={item.title}>
-      <NavigationMenuLink
-        href={item.url}
-        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground"
-      >
-        {item.title}
-      </NavigationMenuLink>
-    </NavigationMenuItem>
-  );
-};
-
-const renderMobileMenuItem = (item: MenuItem) => {
-  if (item.items) {
-    return (
-      <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
-          {item.title}
-        </AccordionTrigger>
-        <AccordionContent className="mt-2">
-          {item.items.map((subItem) => (
-            <SubMenuLink key={subItem.title} item={subItem} />
-          ))}
-        </AccordionContent>
-      </AccordionItem>
-    );
-  }
-
-  return (
-    <Link key={item.title} href={item.url} className="text-md font-semibold">
-      {item.title}
-    </Link>
-  );
-};
-
-const SubMenuLink = ({ item }: { item: MenuItem }) => {
-  return (
-    <Link
-      className="flex flex-row gap-4 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
-      href={item.url}
-    >
-      <div className="text-foreground">{item.icon}</div>
-      <div>
-        <div className="text-sm font-semibold">{item.title}</div>
-        {item.description && (
-          <p className="text-sm leading-snug text-muted-foreground">
-            {item.description}
-          </p>
-        )}
-      </div>
-    </Link>
-  );
-};
-
-export { Navbar };
-
+    </nav>
+  )
+}
