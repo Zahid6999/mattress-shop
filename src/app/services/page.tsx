@@ -15,12 +15,12 @@ const page = () => {
             </div>
 
             <h2 className="">
-              Your Exclucive <br />
+              Your Exclusive <br />
               <span className="text-[#e64445] italic">Mattress</span> Products
             </h2>
           </div>
           <div className="flex-1 max-md:w-full">
-            <p className=" md:max-w-lg text-[#181818b3]/70 max-md:text-justify md:place-self-end md:text-right">
+            <p className="text-[#181818b3]/70 max-md:text-justify md:max-w-lg md:place-self-end md:text-right">
               We offer expert digital solutions to boost your brand and online presence. Our services drive growth,
               engagement, and success in the digital world.
             </p>
@@ -42,24 +42,39 @@ const page = () => {
 
         {/* Products  */}
 
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {mattresses.map((item, idx) => (
-            <div key={idx + 1} className="rounded-[12px]">
-              <figure className="max-w-[555px] cursor-pointer overflow-hidden rounded-[12px] md:h-[573px]">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {mattresses.slice(0, 3).map((item, idx) => (
+            <div key={idx} className="relative rounded-[12px]">
+              <figure className="max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
                   src={item.image}
                   alt={item.name}
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   className="h-full w-full rounded-b-[12px] object-cover object-center transition-[scale] duration-200 ease-in hover:scale-105"
                 />
               </figure>
-              <div className="p-4">
-                <h3 className="text-7 mb-1 font-semibold tracking-wide">{item.name}</h3>
-                <p className="inline rounded-[2px] bg-amber-300 p-1 text-xl font-bold tracking-wide text-gray-900">
-                  A$ {item.price}
+
+              <div className="absolute bottom-[150px] left-6">
+                <div className="flex items-center gap-2">
+                  <h3 className="mb-1 font-semibold tracking-wide text-[var(--color-backgroundBody)]">{item.name} </h3>
+
+                  {item.feelOptions.map((feel) => (
+                    <div key={feel} className="inline-block rounded-[72px] bg-[#ff6633]">
+                      <span className="dark:text-backgroundBody inline-block px-[17px] py-1.5 text-[10px] font-medium tracking-[0.96px] text-[var(--color-background)] uppercase">
+                        {feel}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="inline text-xl font-bold tracking-wide text-[var(--color-backgroundBody)]">
+                  Price: A${item.price}
                 </p>
-                <ul className="mt-6 grid grid-cols-2 [&>*:not(:last-child)]:mb-1">
+              </div>
+              <div>
+                <h6 className="mt-6"> Product Feature</h6>
+                <ul className="mt-3.5 grid max-w-[380px] grid-cols-2 [&>*:not(:last-child)]:mb-1">
                   {item.features.map((list) => (
                     <li key={list} className="inline-flex items-center gap-1 text-black/80">
                       <span>
