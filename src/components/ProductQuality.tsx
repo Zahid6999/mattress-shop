@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import { FC } from 'react';
+import Image from 'next/image'
+import { FC } from 'react'
 
 const features = [
   {
@@ -34,55 +34,42 @@ const features = [
     title: 'Certified Mattress',
     description: 'A cooling substance that is up to 5 degrees less than a standard.',
   },
-];
+]
 
 const ProductQuality: FC = () => {
   return (
-    <section className="bg-[#f7f9f9] pt-[140px] md:pt-[200px] lg:pt-[250px] xl:pt-[270px] pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
-        <div className="container">
+    <section className="bg-[#f7f9f9]pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
+      <div className="container">
+        <div className="flex items-center justify-around gap-20">
+          {/* Left Image */}
+          <figure className="md:w-[40%]">
+            <Image src="/images/mattresse-shape.png" alt="Mattress" className="w-full" width={540} height={399} />
+          </figure>
 
-      <div className=" flex items-center gap-20 justify-around ">
-        {/* Left Image */}
-        <figure className='md:w-[40%]'>
-          <Image
-            src="/images/mattresse-shape.png"
-            alt="Mattress"
-            className='w-full'
-           width={540}
-           height={399}
-          />
-        </figure>
+          {/* Right Content */}
+          <div className="md:w-[60%]">
+            <h2 className="mb-8 text-3xl font-semibold text-[var(--color-secondary)] md:text-[40px] lg:leading-[1.4]">
+              Why Choose Our <br /> Products
+            </h2>
 
-        {/* Right Content */}
-        <div className='md:w-[60%]'>
-          <h2 className="text-3xl md:text-[40px] font-semibold lg:leading-[1.4] text-[var(--color-secondary)] mb-8">
-            Why Choose  Our <br /> Products
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {features.map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gray-300  rounded-b-xl mt-1 relative">
-                  <Image
-                    src={item.icon}
-                    alt={item.title}
-                    fill
-                    className="size-[30px] "
-                  />
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              {features.map((item, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="relative mt-1 h-12 w-12 rounded-b-xl bg-gray-300">
+                    <Image src={item.icon} alt={item.title} fill className="size-[30px]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold tracking-[0.024rem]">{item.title}</h3>
+                    <p className="mt-2 max-w-[255px] text-sm text-black/80">{item.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold tracking-[0.024rem]
-                  ">{item.title}</h3>
-                  <p className="text-sm text-black/80 mt-2 max-w-[255px]">{item.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-        </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProductQuality;
+export default ProductQuality

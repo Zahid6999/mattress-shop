@@ -6,8 +6,8 @@ export default function Portfolio() {
     <section className="pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-44 lg:pb-[88px] xl:pt-[200px] xl:pb-[100px]">
       <div className="container">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {mattresses.slice(0, 3).map((item, idx) => (
-            <div key={idx} className="relative rounded-[12px]">
+          {mattresses.slice(0, 4).map((item, idx) => (
+            <div key={idx + 1} className="relative rounded-[12px]">
               <figure className="max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
                   src={item.image}

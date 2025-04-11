@@ -4,7 +4,7 @@ import { mattresses } from '../../../data/servicesData'
 
 const page = () => {
   return (
-    <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
+    <section className="mt-14 pb-14 md:pt-16 md:pb-16 lg:mt-[88px] lg:pb-[88px] xl:mt-[100px] xl:pb-[100px]">
       <div className="container">
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-3 md:mb-20 md:flex-row md:items-center lg:justify-start">
           <div className="flex-1">
@@ -15,7 +15,7 @@ const page = () => {
             </div>
 
             <h2 className="">
-              Your Exclucive <br />
+              Your Exclusive <br />
               <span className="text-[#e64445] italic">Mattress</span> Products
             </h2>
           </div>
@@ -42,24 +42,39 @@ const page = () => {
 
         {/* Products  */}
 
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-2">
           {mattresses.map((item, idx) => (
-            <div key={idx + 1} className="rounded-[12px]">
-              <figure className="max-w-[555px] cursor-pointer overflow-hidden rounded-[12px] md:h-[573px]">
+            <div key={idx + 1} className="relative rounded-[12px]">
+              <figure className="max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
                   src={item.image}
                   alt={item.name}
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   className="h-full w-full rounded-b-[12px] object-cover object-center transition-[scale] duration-200 ease-in hover:scale-105"
                 />
               </figure>
-              <div className="p-4">
-                <h3 className="text-7 mb-1 font-semibold tracking-wide">{item.name}</h3>
-                <p className="inline rounded-[2px] bg-amber-300 p-1 text-xl font-bold tracking-wide text-gray-900">
-                  A$ {item.price}
+
+              <div className="absolute bottom-[150px] left-6">
+                <div className="flex items-center gap-2">
+                  <h3 className="mb-1 font-semibold tracking-wide text-[var(--color-backgroundBody)]">{item.name} </h3>
+
+                  {item.feelOptions.map((feel) => (
+                    <div key={feel} className="inline-block rounded-[72px] bg-[#ff6633]">
+                      <span className="dark:text-backgroundBody inline-block px-[17px] py-1.5 text-[10px] font-medium tracking-[0.96px] text-[var(--color-background)] uppercase">
+                        {feel}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="inline text-xl font-bold tracking-wide text-[var(--color-backgroundBody)]">
+                  Price: A${item.price}
                 </p>
-                <ul className="mt-6 grid grid-cols-2 [&>*:not(:last-child)]:mb-1">
+              </div>
+              <div>
+                <h6 className="mt-6"> Product Feature</h6>
+                <ul className="mt-3.5 grid max-w-[380px] grid-cols-2 [&>*:not(:last-child)]:mb-1">
                   {item.features.map((list) => (
                     <li key={list} className="inline-flex items-center gap-1 text-black/80">
                       <span>
