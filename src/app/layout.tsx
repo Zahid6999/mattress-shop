@@ -1,4 +1,4 @@
-import NavbarV2 from '@/components/common/NabarV2'
+import { Navbar } from '@/components/common/Navbar'
 import SmoothScrollProvider from '@/components/common/SmoothScroll'
 import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <SmoothScrollProvider>
         <body className={`${inter.className} bg-[#EDF0F5] antialiased`}>
-          <NavbarV2 />
+          <Navbar />
           <main>{children}</main>
           <Footer />
         </body>

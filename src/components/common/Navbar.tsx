@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 
-export default function NavbarV2() {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const lenis = useLenis()
@@ -20,9 +20,9 @@ export default function NavbarV2() {
     <nav className="border-b border-[#a3a99f] bg-[#d40027] px-4 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
-        <div className="flex-shrink-0">
+        <Link href={'/'} className="flex-shrink-0">
           <Image src="/images/logo/logo.jpeg" alt="Logo" className="rounded" width={60} height={60} />
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden items-center space-x-10 font-medium md:flex">
