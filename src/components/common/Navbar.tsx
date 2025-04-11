@@ -1,28 +1,53 @@
 'use client'
-
+import { useLenis } from 'lenis/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 
-export default function NavbarV2() {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [showNav, setShowNav] = useState(true)
+  const lastScrollY = useRef(0)
+
+  const lenis = useLenis()
 
   const navLinks = [
     { name: 'Home', href: '/' },
-
     { name: 'Services', href: '/services' },
-
     { name: 'Contact', href: '/contact' },
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        // Scrolling down
+        setShowNav(false)
+      } else {
+        // Scrolling up
+        setShowNav(true)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="border-b border-[#a3a99f] bg-[#d40027] px-4 py-2">
+    <nav
+      className={`fixed top-0 right-0 left-0 z-50 transform border-b border-[#a3a99f] bg-[#d40027] p-4 transition-transform duration-500 ${
+        showNav ? 'translate-y-0' : '-translate-y-full'
+      }`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
-        <div className="flex-shrink-0">
+        <Link href={'/'} className="flex-shrink-0">
           <Image src="/images/logo/logo.jpeg" alt="Logo" className="rounded" width={60} height={60} />
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden items-center space-x-10 font-medium md:flex">
@@ -41,14 +66,20 @@ export default function NavbarV2() {
 
         {/* Desktop Button */}
         <li className="list-none">
-          <Link href="/contact" className="rv-button rv-button-sm rv-button-white">
+          <div
+            className="rv-button rv-button-sm rv-button-white cursor-pointer"
+            onClick={() => {
+              lenis?.scrollTo('#contact-form', {
+                duration: 2,
+              })
+            }}>
             <div className="rv-button-top">
               <span>Get Quote</span>
             </div>
             <div className="rv-button-bottom">
               <span>Get Quote</span>
             </div>
-          </Link>
+          </div>
         </li>
 
         {/* Mobile Menu Button */}

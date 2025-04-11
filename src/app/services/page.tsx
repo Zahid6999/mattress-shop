@@ -4,7 +4,7 @@ import { mattresses } from '../../../data/servicesData'
 
 const page = () => {
   return (
-    <section className="pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
+    <section className="mt-14 pb-14 md:pt-16 md:pb-16 lg:mt-[88px] lg:pb-[88px] xl:mt-[100px] xl:pb-[100px]">
       <div className="container">
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-3 md:mb-20 md:flex-row md:items-center lg:justify-start">
           <div className="flex-1">
@@ -42,9 +42,9 @@ const page = () => {
 
         {/* Products  */}
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-2">
           {mattresses.map((item, idx) => (
-            <div key={idx} className="relative rounded-[12px]">
+            <div key={idx + 1} className="relative rounded-[12px]">
               <figure className="max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
                   src={item.image}

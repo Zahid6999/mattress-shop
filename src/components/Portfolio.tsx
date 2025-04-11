@@ -7,7 +7,7 @@ export default function Portfolio() {
       <div className="container">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {mattresses.slice(0, 4).map((item, idx) => (
-            <div key={idx} className="relative rounded-[12px]">
+            <div key={idx + 1} className="relative rounded-[12px]">
               <figure className="max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
                   src={item.image}

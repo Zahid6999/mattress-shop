@@ -7,7 +7,7 @@ const footerSections = [
   {
     title: 'Company',
     links: [
-      { name: 'Home', href: '#' },
+      { name: 'Home', href: '/' },
       { name: 'About Us', href: '#' },
       { name: 'Reviews', href: '#' },
     ],
@@ -41,7 +41,7 @@ const Footer = () => {
         {/* Logo + Social */}
         <div className="space-y-4 md:w-[36%]">
           <h3 className="font-normal">
-            Mattress<span className="text-[12px] text-[#e64445]">BY</span>
+            Mattress<span className="text-xs text-[#e64445]">BY</span>
           </h3>
           <div className="flex space-x-4">
             <SiFacebook className="h-5 w-5 fill-[#e64445] stroke-[#e64445] transition-all duration-300 ease-linear hover:-translate-y-1 hover:fill-[var(--text-color)] hover:stroke-[var-(--text-color)]" />
@@ -86,7 +86,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-10 border-t border-gray-300 pt-6 text-center text-xs text-gray-500">
-        © Mattress BY appointment. All rights reserved 2025
+        © {new Date().getFullYear()} All rights reserved | Mattress BY appointment.
       </div>
     </footer>
   )
