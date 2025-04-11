@@ -8,7 +8,7 @@ const Hero = () => {
           <h1 className="text-[var(--color-backgroundBody)]">Better Sleep, Better Living</h1>
           <p className="mt-5 mb-16 text-[#f5f4fb]">
             25 years of German handmade mattresses now available in the USA <br />
-            Experience a mattress made for everyBODY!
+            Experience a mattress made for everybody!
           </p>
 
           <ul className="flex flex-col items-center justify-center gap-6 md:flex-row">
