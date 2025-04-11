@@ -20,7 +20,7 @@ const page = () => {
             </h2>
           </div>
           <div className="flex-1 max-md:w-full">
-            <p className=" md:max-w-lg text-[#181818b3]/70 max-md:text-justify md:place-self-end md:text-right">
+            <p className="text-[#181818b3]/70 max-md:text-justify md:max-w-lg md:place-self-end md:text-right">
               We offer expert digital solutions to boost your brand and online presence. Our services drive growth,
               engagement, and success in the digital world.
             </p>
