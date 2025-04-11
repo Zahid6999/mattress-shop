@@ -10,14 +10,14 @@ export default function NavbarV2() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+
     { name: 'Services', href: '/services' },
-    { name: 'Delivery', href: '/delivery' },
+
     { name: 'Contact', href: '/contact' },
   ]
 
   return (
-    <nav className="border-b border-[#a3a99f] bg-[#d5dbd2] px-4 py-4">
+    <nav className="border-b border-[#a3a99f] bg-[#d40027] px-4 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -25,12 +25,14 @@ export default function NavbarV2() {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden items-center space-x-10 font-medium text-gray-900 md:flex">
+        <ul className="hidden items-center space-x-10 font-medium md:flex">
           {navLinks.map((link) => (
             <li
               key={link.name}
-              className="relative overflow-hidden pb-[1.5px] before:absolute before:bottom-0 before:left-0 before:h-[1.9px] before:w-full before:origin-right before:scale-x-0 before:bg-[#d40027] before:transition-transform before:duration-700 before:content-[''] hover:before:origin-left hover:before:scale-x-100">
-              <Link href={link.href} className="transition hover:text-[#d40027]">
+              className="relative overflow-hidden pb-[1.5px] before:absolute before:bottom-0 before:left-0 before:h-[1.9px] before:w-full before:origin-right before:scale-x-0 before:bg-[var(--color-backgroundBody)] before:transition-transform before:duration-700 before:content-[''] hover:before:origin-left hover:before:scale-x-100">
+              <Link
+                href={link.href}
+                className="text-lg text-[#d8d8d4] transition hover:text-[var(--color-backgroundBody)]">
                 {link.name}
               </Link>
             </li>
@@ -38,8 +40,8 @@ export default function NavbarV2() {
         </ul>
 
         {/* Desktop Button */}
-        <li>
-          <Link href="/contact" className="rv-button rv-button-sm rv-button-secondary">
+        <li className="list-none">
+          <Link href="/contact" className="rv-button rv-button-sm rv-button-white">
             <div className="rv-button-top">
               <span>Get Quote</span>
             </div>
