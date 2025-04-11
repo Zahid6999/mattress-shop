@@ -40,7 +40,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 right-0 left-0 z-50 transform border-b border-[#a3a99f] bg-[#d40027] px-4 py-4 transition-transform duration-500 ${
+      className={`fixed top-0 right-0 left-0 z-50 transform border-b border-[#a3a99f] bg-[#d40027] p-4 transition-transform duration-500 ${
         showNav ? 'translate-y-0' : '-translate-y-full'
       }`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between">
