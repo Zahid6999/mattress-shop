@@ -2,11 +2,13 @@
 import { useLenis } from 'lenis/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [showNav, setShowNav] = useState(true)
+  const lastScrollY = useRef(0)
 
   const lenis = useLenis()
 
@@ -16,8 +18,31 @@ export const Navbar = () => {
     { name: 'Contact', href: '/contact' },
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        // Scrolling down
+        setShowNav(false)
+      } else {
+        // Scrolling up
+        setShowNav(true)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="border-b border-[#a3a99f] bg-[#d40027] px-4 py-4">
+    <nav
+      className={`fixed top-0 right-0 left-0 z-50 transform border-b border-[#a3a99f] bg-[#d40027] px-4 py-4 transition-transform duration-500 ${
+        showNav ? 'translate-y-0' : '-translate-y-full'
+      }`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link href={'/'} className="flex-shrink-0">
