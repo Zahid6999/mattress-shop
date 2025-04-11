@@ -34,7 +34,7 @@ const footerSections = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f3f8f7] text-[#4a7271] py-12 mt-20 rounded-t-3xl" id="jak">
+    <footer className="bg-[#f3f8f7] text-[#4a7271] pt-14 md:pt-16 lg:pt-[88px] xl:pt-[100px] pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px] rounded-t-3xl" id="jak">
         <div className="max-w-[1300px] mx-auto px-4 flex flex-col md:flex-row  items-start gap-8">
       {/* Logo + Social */}
       <div className="space-y-4 md:w-[36%]">
