@@ -38,7 +38,7 @@ const features = [
 
 const ProductQuality: FC = () => {
   return (
-    <section className="bg-[#f7f9f9] pt-14 md:pt-16 lg:pt-[88px] xl:pt-[100px] pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
+    <section className="bg-[#f7f9f9] pt-[140px] md:pt-[200px] lg:pt-[250px] xl:pt-[270px] pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
         <div className="container">
 
       <div className=" flex items-center gap-20 justify-around ">
