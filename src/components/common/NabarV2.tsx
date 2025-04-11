@@ -17,7 +17,7 @@ export default function NavbarV2() {
   ]
 
   return (
-    <nav className="border-b border-[#a3a99f] bg-[#d40027] px-4 py-4">
+    <nav className="border-b border-[#a3a99f] bg-[#d40027] px-4 py-2">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
