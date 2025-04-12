@@ -35,9 +35,9 @@ const footerSections = [
 const Footer = () => {
   return (
     <footer
-      className="rounded-t-3xl bg-[#f3f8f7] pt-14 pb-14 text-[#4a7271] md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]"
+      className="rounded-t-3xl bg-[#f3f8f7] pt-14 pb-2.5 text-[#4a7271] md:pt-16 lg:pt-[88px] xl:pt-[100px]"
       id="jak">
-      <div className="mx-auto flex max-w-[1300px] flex-col items-start gap-8 px-4 md:flex-row">
+      <div className="mx-auto flex max-w-[1300px] flex-col items-start gap-8 px-4 md:flex-row md:flex-wrap lg:flex-nowrap">
         {/* Logo + Social */}
         <div className="space-y-4 md:w-[36%]">
           <h3 className="font-normal">
@@ -53,13 +53,13 @@ const Footer = () => {
         {/* Mapped Sections */}
         {footerSections.map((section) => (
           <div key={section.title} className="md:w-[20%]">
-            <h6 className="mb-3 text-[20px] font-semibold">{section.title}</h6>
+            <h6 className="mb-4 text-[20px] font-semibold">{section.title}</h6>
             <ul className="space-y-2 text-sm">
               {section.links.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="inline-block transition-all duration-300 hover:-translate-y-0.5 hover:text-[#d40027]">
+                    className="inline-block text-black/60 transition-all duration-300 hover:-translate-y-0.5 hover:text-[#d40027]">
                     {link.name}
                   </a>
                 </li>
@@ -85,7 +85,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-10 border-t border-gray-300 pt-6 text-center text-xs text-gray-500">
+      <div className="container mt-10 border-t border-gray-300 pt-6 text-center text-xs text-gray-500">
         © {new Date().getFullYear()} All rights reserved | Mattress BY appointment.
       </div>
     </footer>

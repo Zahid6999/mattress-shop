@@ -38,16 +38,16 @@ const features = [
 
 const ProductQuality: FC = () => {
   return (
-    <section className="bg-[#f7f9f9]pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
+    <section className="bg-[#f7f9f9] pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]">
       <div className="container">
-        <div className="flex items-center justify-around gap-20">
+        <div className="flex flex-col-reverse items-center justify-around gap-20 lg:flex-row">
           {/* Left Image */}
-          <figure className="md:w-[40%]">
+          <figure className="lg:w-[40%]">
             <Image src="/images/mattresse-shape.png" alt="Mattress" className="w-full" width={540} height={399} />
           </figure>
 
           {/* Right Content */}
-          <div className="md:w-[60%]">
+          <div className="lg:w-[60%]">
             <h2 className="mb-8 text-3xl font-semibold text-[var(--color-secondary)] md:text-[40px] lg:leading-[1.4]">
               Why Choose Our <br /> Products
             </h2>
