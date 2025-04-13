@@ -12,6 +12,10 @@ const WhyChoose = () => {
         </h2>
         <div className="relative mt-24">
           <div className="flex items-center justify-center">
+            <div className="absolute bottom-[30%] left-1/5 flex h-[120px] w-[120px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center">
+              <span className="text-[26px] font-normal text-white">Save</span>
+              <span className="text-[24px] leading-none font-bold text-white">70%</span>
+            </div>
             <figure>
               <Image src="/images/products/mattress-9.jpg" alt="Natural latex pillow" width={400} height={400} />
             </figure>
