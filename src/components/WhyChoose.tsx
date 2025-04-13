@@ -13,7 +13,7 @@ const WhyChoose = () => {
         <div className="relative mt-24">
           <div className="flex items-center justify-center">
             <figure>
-              <Image src="/images/latex-pillow-1.jpg" alt="Natural latex pillow" width={400} height={400} />
+              <Image src="/images/products/mattress-9.jpg" alt="Natural latex pillow" width={400} height={400} />
             </figure>
             <figure className="absolute top-[20%] right-[10%] z-20">
               <Image
