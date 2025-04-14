@@ -32,7 +32,9 @@ const ContactForm = ({ spacing }: PropsType) => {
   return (
     <section
       className={`${spacing ? 'pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]' : ''}`}
-      id="contact-form">
+      id="contact-form"
+      data-aos="fade-up"
+      data-aos-duration="1000">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mx-auto flex w-full flex-col gap-6 rounded-lg bg-gray-100 p-10 md:max-w-[564px]">

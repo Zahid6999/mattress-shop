@@ -1,11 +1,18 @@
+import ClientWrapper from '@/components/common/ClientWrapper' // ✅ Import this
 import { Navbar } from '@/components/common/Navbar'
 import SmoothScrollProvider from '@/components/common/SmoothScroll'
 import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// import { Noto_Sans } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+// const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-noto-sans' })
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700'], // Optional: choose specific weights
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,13 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SmoothScrollProvider>
-        <body className={`${inter.className} bg-[#EDF0F5] antialiased`}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </body>
-      </SmoothScrollProvider>
+      <body className={`${poppins.className} bg-[#EDF0F5] antialiased`}>
+        <SmoothScrollProvider>
+          <ClientWrapper>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </ClientWrapper>
+        </SmoothScrollProvider>
+      </body>
     </html>
   )
 }
