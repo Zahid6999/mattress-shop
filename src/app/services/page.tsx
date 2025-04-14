@@ -7,7 +7,7 @@ const page = () => {
     <section className="pt-36 pb-14 md:pt-40 md:pb-16 lg:pt-44 lg:pb-[88px] xl:pt-[200px] xl:pb-[100px]">
       <div className="container">
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-3 md:mb-20 md:flex-row md:items-center lg:justify-start">
-          <div className="flex-1">
+          <div data-aos="fade-up" data-aos-duration="800" className="flex-1">
             <div className="mb-3 inline-block rounded-[72px] bg-[#18181817] md:mb-4 dark:bg-[#edf0f533]">
               <span className="inline-block px-[17px] py-2 text-xs font-medium tracking-[0.96px] text-black uppercase">
                 Services
@@ -19,7 +19,7 @@ const page = () => {
               <span className="text-[#e64445] italic">Mattress</span> Products
             </h2>
           </div>
-          <div className="flex-1 max-md:w-full">
+          <div className="flex-1 max-md:w-full" data-aos="fade-up" data-aos-duration="800">
             <p className="text-[#181818b3]/70 max-md:text-justify md:max-w-lg md:place-self-end md:text-right">
               We offer expert digital solutions to boost your brand and online presence. Our services drive growth,
               engagement, and success in the digital world.
@@ -44,7 +44,11 @@ const page = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-20 lg:grid-cols-2">
           {mattresses.map((item, idx) => (
-            <div key={idx + 1} className="relative rounded-[12px]">
+            <div
+              key={idx + 1}
+              className="relative rounded-[12px]"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center">
               {/* Image container with gradient overlay */}
               <figure className="relative max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image

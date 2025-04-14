@@ -7,7 +7,11 @@ export default function Portfolio() {
       <div className="container">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {mattresses.slice(0, 4).map((item, idx) => (
-            <div key={idx + 1} className="relative rounded-[12px]">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+              key={idx + 1}
+              className="relative rounded-[12px]">
               {/* Image container with gradient overlay */}
               <figure className="relative max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image

@@ -1,6 +1,6 @@
 export const ContactHeading = () => {
   return (
-    <div className="mb-14 text-center">
+    <div className="mb-14 text-center" data-aos="fade-up" data-aos-duration="800">
       <p className="text-dark-black text-sm font-semibold">Reach us</p>
 
       <h2 className="mb-3 font-semibold">

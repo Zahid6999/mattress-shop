@@ -42,17 +42,23 @@ const ProductQuality: FC = () => {
       <div className="container">
         <div className="flex flex-col-reverse items-center justify-around gap-20 lg:flex-row">
           {/* Left Image */}
-          <figure className="lg:w-[40%]">
+          <figure className="lg:w-[40%]" data-aos="fade-right">
             <Image src="/images/mattresse-shape.png" alt="Mattress" className="w-full" width={540} height={399} />
           </figure>
 
           {/* Right Content */}
           <div className="lg:w-[60%]">
-            <h2 className="mb-8 text-3xl font-semibold text-[var(--color-secondary)] md:text-[40px] lg:leading-[1.4]">
+            <h2
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
+              className="mb-8 text-3xl font-semibold text-[var(--color-secondary)] md:text-[40px] lg:leading-[1.4]">
               Why Choose Our <br /> Products
             </h2>
 
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <div
+              className="grid grid-cols-1 gap-8 sm:grid-cols-2"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center">
               {features.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
                   <div className="relative mt-1 h-12 w-12 rounded-b-xl bg-gray-300">
