@@ -1,9 +1,10 @@
+'use client'
 import Image from 'next/image'
 
 const WhyChoose = () => {
   return (
     <section className="bg-[#f9f9f6] pt-14 pb-[140px] text-center md:pt-16 md:pb-[200px] lg:pt-[88px] lg:pb-[250px] xl:pt-[100px] xl:pb-[310px]">
-      <div className="container">
+      <div className="container overflow-hidden">
         <h2
           className="mb-2 text-2xl font-medium text-[#B5B26F] md:text-4xl lg:text-[80px] lg:leading-[1.3]"
           data-aos="fade-up"

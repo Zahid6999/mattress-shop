@@ -32,7 +32,7 @@ const page = () => {
               engagement, and success in the digital world.
             </p>
 
-            <ul className="reveal-me mt-5 justify-self-end max-md:w-full md:mt-10">
+            <ul className="mt-5 justify-self-end max-md:w-full md:mt-10">
               <li className="mx-auto block w-full text-center md:inline-block md:w-auto">
                 <Link href="/contact" className="rv-button rv-button-white block md:inline-block">
                   <div className="rv-button-top w-full">
