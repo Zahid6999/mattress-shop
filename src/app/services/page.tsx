@@ -70,7 +70,7 @@ const page = () => {
               </figure>
 
               {/* Text over the image */}
-              <div className="absolute bottom-[150px] left-6 z-20">
+              <div className="smallMobile:bottom-[150px] absolute bottom-[194px] left-6 z-20">
                 <div className="flex items-center gap-2 max-sm:flex-wrap">
                   <h3 className="mb-1 font-semibold tracking-wide text-[var(--color-backgroundBody)]">{item.name}</h3>
 
