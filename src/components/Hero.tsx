@@ -2,16 +2,16 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-screen justify-center overflow-hidden bg-white bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat pt-[50%] sm:pt-[30%] lg:pt-[25%] xl:pt-[20%] 2xl:pt-[16%]">
+    <section className="relative flex min-h-screen justify-center overflow-hidden bg-white bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat pt-[40%] sm:pt-[30%] lg:pt-[25%] xl:pt-[20%] 2xl:pt-[16%]">
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
       <div>
         {/* Save 20% Badge */}
         <div
           data-aos="fade-right"
           data-aos-anchor-placement="top-bottom"
-          className="absolute bottom-[30%] left-1/5 flex h-[120px] w-[120px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center">
-          <span className="text-[26px] font-normal text-white">Save</span>
-          <span className="text-[24px] leading-none font-bold text-white">70%</span>
+          className="absolute bottom-[32%] left-5 flex size-[80px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center sm:bottom-[30%] sm:left-1/5 sm:h-[120px] sm:w-[120px]">
+          <span className="text-base font-normal text-white sm:text-[26px]">Save</span>
+          <span className="text-base leading-none font-bold text-white sm:text-[24px]">70%</span>
         </div>
       </div>
 
