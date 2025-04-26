@@ -1,6 +1,13 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { mattresses } from '../../../data/servicesData'
+
+export const metadata: Metadata = {
+  title: 'Mattress Shop - services',
+  description:
+    'Explore our range of mattress services, including expert advice, delivery, setup, and mattress removal. Proudly serving customers across Australia with quality and care.',
+}
 
 const page = () => {
   return (
