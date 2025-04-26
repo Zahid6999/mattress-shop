@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 // import { Noto_Sans } from 'next/font/google'
 import { Poppins } from 'next/font/google'
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
 
 // const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-noto-sans' })
@@ -30,7 +31,10 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <ClientWrapper>
             <Navbar />
-            <main>{children}</main>
+            <main>
+              {children}
+              <Toaster position="top-right" toastOptions={{ className: 'text-base' }} />
+            </main>
             <Footer />
           </ClientWrapper>
         </SmoothScrollProvider>
