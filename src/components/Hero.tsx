@@ -9,7 +9,7 @@ const Hero = () => {
         <div
           data-aos="fade-right"
           data-aos-anchor-placement="top-bottom"
-          className="absolute bottom-[32%] left-5 flex size-[80px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center sm:bottom-[30%] sm:left-1/5 sm:h-[120px] sm:w-[120px]">
+          className="absolute bottom-[34%] left-5 flex size-[80px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center sm:bottom-[30%] sm:left-1/5 sm:h-[120px] sm:w-[120px]">
           <span className="text-base font-normal text-white sm:text-[26px]">Save</span>
           <span className="text-base leading-none font-bold text-white sm:text-[24px]">70%</span>
         </div>

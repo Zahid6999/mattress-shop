@@ -95,7 +95,7 @@ export const Navbar = () => {
         }`}>
         <ul className="mt-4 flex flex-col space-y-4 px-4 font-medium text-gray-900">
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.name} onClick={() => setIsOpen(false)}>
               <Link href={link.href} className="block transition hover:text-gray-600">
                 {link.name}
               </Link>
