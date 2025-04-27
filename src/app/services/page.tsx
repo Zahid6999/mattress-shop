@@ -55,7 +55,9 @@ const page = () => {
               key={idx + 1}
               className="relative rounded-[12px]"
               data-aos="fade-up"
+              data-aos-offset="-150"
               data-aos-anchor-placement="top-center">
+              {/* Image container with gradient overlay */}
               {/* Image container with gradient overlay */}
               <figure className="relative max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
@@ -70,13 +72,13 @@ const page = () => {
               </figure>
 
               {/* Text over the image */}
-              <div className="smallMobile:bottom-[150px] absolute bottom-[194px] left-6 z-20">
-                <div className="flex items-center gap-2 max-sm:flex-wrap">
+              <div className="smallMobile:bottom-[34%] absolute left-6 z-20 sm:bottom-[24%]">
+                <div className="flex flex-wrap items-center gap-2 lg:flex-none xl:flex">
                   <h3 className="mb-1 font-semibold tracking-wide text-[var(--color-backgroundBody)]">{item.name}</h3>
 
                   {item.feelOptions.map((feel) => (
                     <div key={feel} className="inline-block rounded-[72px] bg-[#ff6633]">
-                      <span className="dark:text-backgroundBody inline-block px-[17px] py-1.5 text-[10px] font-medium tracking-[0.96px] text-[var(--color-background)] uppercase">
+                      <span className="dark:text-backgroundBody inline-block px-[10px] py-1.5 text-[8px] font-medium tracking-[0.96px] text-[var(--color-background)] uppercase">
                         {feel}
                       </span>
                     </div>
@@ -91,7 +93,7 @@ const page = () => {
               {/* Product features below the image */}
               <div>
                 <h6 className="mt-6">Product Feature</h6>
-                <ul className="mt-3.5 grid max-w-[380px] grid-cols-2 [&>*:not(:last-child)]:mb-1">
+                <ul className="mt-3.5 grid max-w-[380px] grid-cols-1 sm:grid-cols-2 [&>*:not(:last-child)]:mb-1">
                   {item.features.map((list) => (
                     <li key={list} className="inline-flex items-center gap-1 text-black/80">
                       <span>

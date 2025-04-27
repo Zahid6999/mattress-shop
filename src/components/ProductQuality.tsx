@@ -58,6 +58,7 @@ const ProductQuality: FC = () => {
             <div
               className="grid grid-cols-1 gap-8 sm:grid-cols-2"
               data-aos="fade-up"
+              data-aos-offset="-100"
               data-aos-anchor-placement="top-center">
               {features.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">

@@ -8,26 +8,26 @@ const footerSections = [
     title: 'Company',
     links: [
       { name: 'Home', href: '/' },
-      { name: 'About Us', href: '#' },
-      { name: 'Reviews', href: '#' },
+      { name: 'About Us', href: '#', upcoming: 'soon' },
+      { name: 'Reviews', href: '#', upcoming: 'soon' },
     ],
   },
   {
     title: 'Products',
     links: [
-      { name: 'Mattress', href: '#' },
-      { name: 'Hybrid', href: '#' },
-      { name: 'Pillow', href: '#' },
-      { name: 'Bed', href: '#' },
+      { name: 'Mattress', href: '/services' },
+      { name: 'Hybrid', href: '#', upcoming: 'soon' },
+      { name: 'Pillow', href: '#', upcoming: 'soon' },
+      { name: 'Bed', href: '/services' },
     ],
   },
   {
     title: 'Support',
     links: [
-      { name: 'Blog', href: '#' },
-      { name: 'FAQs', href: '#' },
-      { name: 'Contact Us', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'Blog', href: '#', upcoming: 'soon' },
+      { name: 'FAQs', href: '#', upcoming: 'soon' },
+      { name: 'Contact Us', href: '#', upcoming: 'soon' },
+      { name: 'Privacy Policy', href: '#', upcoming: 'soon' },
     ],
   },
 ]
@@ -62,6 +62,11 @@ const Footer = () => {
                     className="inline-block text-black/60 transition-all duration-300 hover:-translate-y-0.5 hover:text-[#d40027]">
                     {link.name}
                   </a>
+                  {link.upcoming && (
+                    <span className="ml-1.5 rounded bg-red-600 px-0.5 py-[1px] text-[8px] text-white">
+                      {link.upcoming}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
