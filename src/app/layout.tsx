@@ -16,9 +16,69 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Mattress Shop',
+  title: {
+    default: 'Mattress Shop | Premium Australian Made Mattresses',
+    template: '%s | Mattress Shop',
+  },
   description:
     'Shop the best mattresses in Australia! Explore our wide range of premium mattresses for all sleep styles. Fast shipping, top-rated service, and unbeatable comfort.',
+  keywords: [
+    'mattress shop',
+    'Australian mattresses',
+    'premium mattresses',
+    'bedding',
+    'sleep comfort',
+    'mattress store',
+  ],
+  authors: [{ name: 'Your Company Name' }],
+  creator: 'Your Company Name',
+  publisher: 'Your Company Name',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://your-domain.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Mattress Shop | Premium Australian Made Mattresses',
+    description:
+      'Shop the best mattresses in Australia! Explore our wide range of premium mattresses for all sleep styles.',
+    url: 'https://your-domain.com',
+    siteName: 'Mattress Shop',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mattress Shop',
+      },
+    ],
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mattress Shop | Premium Australian Made Mattresses',
+    description: 'Shop the best mattresses in Australia! Explore our wide range of premium mattresses.',
+    images: ['/images/twitter-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 }
 
 export default function RootLayout({
