@@ -73,3 +73,9 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #b5b26f;
 }
+.stroke-red {
+  color: #d40027;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d40027;
+}

@@ -21,8 +21,8 @@ const features = [
   },
   {
     icon: '/images/logo/award-4.svg',
-    title: 'Our Warranty',
-    description: 'Our mattresses has no weight limitations.',
+    title: 'Premium Australian ',
+    description: 'Made Mattresses at Unbeatable Prices',
   },
   {
     icon: '/images/logo/award-5.svg',

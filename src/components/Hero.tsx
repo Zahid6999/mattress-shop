@@ -20,6 +20,13 @@ const Hero = () => {
           <h1 className="text-[var(--color-backgroundBody)]">
             Better Sleep, Better <br className="hidden lg:block" /> Living
           </h1>
+
+          <p className="my-5 text-2xl text-[#f5f4fb]">
+            Book an Appointment now <br />
+            <span className="mt-1.5 inline-block rounded bg-[var(--color-backgroundBody)] px-3 py-2 text-xl text-[#d40027]">
+              CALL NOW 0404 229 933
+            </span>
+          </p>
           <p className="mt-5 mb-16 text-[#f5f4fb]">
             25 years of German handmade mattresses now available in the USA <br className="hidden md:block" />
             Experience a mattress made for everybody!

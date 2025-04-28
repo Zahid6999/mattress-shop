@@ -46,7 +46,7 @@ export const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link href={'/'} className="flex-shrink-0">
-          <Image src="/images/logo/logo.jpeg" alt="Logo" className="rounded" width={60} height={60} />
+          <Image src="/images/logo/logo-2.png" alt="Logo" className="rounded" width={120} height={120} />
         </Link>
 
         {/* Desktop Nav */}

@@ -1,3 +1,4 @@
+import Brand from '@/components/Brand'
 import ContactForm from '@/components/contact/ContactForm'
 import Hero from '@/components/Hero'
 import Portfolio from '@/components/Portfolio'
@@ -10,6 +11,7 @@ const page = () => {
       <Hero />
       <Portfolio />
       <WhyChoose />
+      <Brand />
       <ContactForm spacing />
       <ProductQuality />
     </>

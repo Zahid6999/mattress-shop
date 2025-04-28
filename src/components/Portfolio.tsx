@@ -5,6 +5,25 @@ export default function Portfolio() {
   return (
     <section className="pt-28 pb-14 md:pt-32 md:pb-16 lg:pt-44 lg:pb-[88px] xl:pt-[200px] xl:pb-[100px]">
       <div className="container">
+        <div
+          className="mb-3.5 flex items-center justify-center"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+          data-aos-offset="-100">
+          <div className="inline-block rounded-[52px] bg-[#d40027]">
+            <h2 className="inline-block px-[17px] py-2 text-xs font-medium tracking-[0.96px] text-white uppercase">
+              WHAT DO WE OFFER?
+            </h2>
+          </div>
+        </div>
+        <h3
+          className="mb-7 text-center text-3xl md:mb-14 md:text-[50px]"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+          data-aos-offset="-100">
+          Comprehensive Mattress <br className="hidden md:block" /> Solutions
+        </h3>
+
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {mattresses.slice(0, 4).map((item, idx) => (
             <div

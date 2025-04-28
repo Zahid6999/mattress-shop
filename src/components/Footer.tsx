@@ -1,6 +1,8 @@
 // app/components/Footer.tsx
+import Link from 'next/link'
 import { FaFacebookMessenger } from 'react-icons/fa6'
 import { IoLogoInstagram } from 'react-icons/io5'
+import { MdLocationOn, MdMarkEmailRead } from 'react-icons/md'
 import { SiFacebook } from 'react-icons/si'
 
 const footerSections = [
@@ -74,18 +76,25 @@ const Footer = () => {
         ))}
 
         {/* Newsletter */}
-        <div className="md:w-[36%]">
-          <h6 className="mb-3 font-semibold">Stay Informed, Sleep Better</h6>
-          <form className="flex space-x-2">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="flex-1 rounded-full bg-white px-4 py-2.5 text-sm text-black/70 shadow placeholder:text-black/50 focus:outline-none"
-            />
-            <button className="rounded-full bg-[#e64445] px-4 py-2 text-sm text-white transition hover:bg-[#fc7c7c]">
-              Submit
-            </button>
-          </form>
+        <div className="space-y-4 md:w-[36%]">
+          <div>
+            <h6 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
+              <MdLocationOn className="fill-black text-2xl" />
+              Location
+            </h6>
+            <p className="text-sm text-black/60">Jape Home Maker Darwin, T20C, 356 Bagot Road, Millner, NT 0810</p>
+          </div>
+          <div>
+            <h6 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
+              <MdMarkEmailRead className="fill-black text-2xl" />
+              Email
+            </h6>
+            <Link
+              href="mailto:mbadarwin100@gmail.com"
+              className="inline-block text-red-600 transition-colors duration-300 hover:text-red-800">
+              mbadarwin100@gmail.com
+            </Link>
+          </div>
         </div>
       </div>
 
