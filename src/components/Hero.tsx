@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-screen justify-center overflow-hidden bg-white bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat pt-[40%] sm:pt-[30%] lg:pt-[25%] xl:pt-[20%] 2xl:pt-[16%]">
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
+    <section className="relative flex min-h-screen justify-center overflow-hidden bg-white bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat pt-[40%] sm:pt-[30%] lg:pt-[25%] xl:pt-[20%] 2xl:pt-[13%]">
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/55 to-transparent" />
       <div>
         {/* Save 20% Badge */}
         <div
@@ -22,7 +22,7 @@ const Hero = () => {
           </h1>
 
           <p className="my-5 text-2xl text-[#f5f4fb]">
-            Book an Appointment now <br />
+            Contact The Shope <br />
             <span className="mt-1.5 inline-block rounded bg-[var(--color-backgroundBody)] px-3 py-2 text-xl text-[#d40027]">
               CALL NOW 0404 229 933
             </span>

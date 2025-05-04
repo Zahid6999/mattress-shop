@@ -55,9 +55,8 @@ const page = () => {
               key={idx + 1}
               className="relative rounded-[12px]"
               data-aos="fade-up"
-              data-aos-offset="-150"
+              data-aos-offset="-200"
               data-aos-anchor-placement="top-center">
-              {/* Image container with gradient overlay */}
               {/* Image container with gradient overlay */}
               <figure className="relative max-w-full overflow-hidden rounded-[12px] md:h-[573px]">
                 <Image
@@ -68,7 +67,7 @@ const page = () => {
                   className="h-full w-full cursor-pointer rounded-b-[12px] object-cover object-center transition-transform duration-200 ease-in hover:scale-105"
                 />
                 {/* Gradient overlay */}
-                <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-40 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-40 bg-gradient-to-t from-black/90 to-transparent" />
               </figure>
 
               {/* Text over the image */}
