@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 const WhyChoose = () => {
   return (
-    <section className="bg-[#f9f9f6] pt-14 pb-[140px] text-center md:pt-16 md:pb-[200px] lg:pt-[88px] lg:pb-[250px] xl:pt-[100px] xl:pb-[310px]">
+    <section className="bg-[var(--color-background-light)] pt-14 pb-[140px] text-center md:pt-16 md:pb-[200px] lg:pt-[88px] lg:pb-[250px] xl:pt-[100px] xl:pb-[310px]">
       <div className="container overflow-hidden sm:overflow-visible">
         <h2
-          className="mb-2 text-2xl font-medium text-[#B5B26F] md:text-4xl lg:text-[80px] lg:leading-[1.3]"
+          className="mb-2 text-2xl font-medium text-[var(--color-gold)] md:text-4xl lg:text-[80px] lg:leading-[1.3]"
           data-aos="fade-up"
           data-aos-anchor-placement="top-center">
           100% natural latex <br className="hidden md:block" />
@@ -19,9 +19,9 @@ const WhyChoose = () => {
             <div
               data-aos="fade-right"
               data-aos-anchor-placement="top-bottom"
-              className="absolute bottom-[30%] left-1/5 flex h-[120px] w-[120px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center">
-              <span className="text-[26px] font-normal text-white">Save</span>
-              <span className="text-[24px] leading-none font-bold text-white">70%</span>
+              className="absolute bottom-[30%] left-1/5 flex h-[120px] w-[120px] flex-col items-center justify-center rounded-full bg-[var(--color-primary)] text-center">
+              <span className="text-[26px] font-normal text-[var(--color-white)]">Save</span>
+              <span className="text-[24px] leading-none font-bold text-[var(--color-white)]">70%</span>
             </div>
             <figure data-aos="fade-right">
               <Image src="/images/products/mattress-9.jpg" alt="Natural latex pillow" width={400} height={400} />

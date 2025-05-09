@@ -9,9 +9,9 @@ const Hero = () => {
         <div
           data-aos="fade-right"
           data-aos-anchor-placement="top-bottom"
-          className="absolute bottom-16 left-3 flex size-[80px] flex-col items-center justify-center rounded-full bg-[#d40027] text-center sm:bottom-8 sm:left-[7%] sm:h-[120px] sm:w-[120px] md:bottom-[9%] lg:bottom-[15%] 2xl:bottom-1/5 2xl:left-1/5">
-          <span className="text-base font-normal text-white sm:text-[26px]">Save</span>
-          <span className="text-base leading-none font-bold text-white sm:text-[24px]">70%</span>
+          className="absolute bottom-16 left-3 flex size-[80px] flex-col items-center justify-center rounded-full bg-[var(--color-primary)] text-center sm:bottom-8 sm:left-[7%] sm:h-[120px] sm:w-[120px] md:bottom-[9%] lg:bottom-[15%] 2xl:bottom-1/5 2xl:left-1/5">
+          <span className="text-base font-normal text-[var(--color-white)] sm:text-[26px]">Save</span>
+          <span className="text-base leading-none font-bold text-[var(--color-white)] sm:text-[24px]">70%</span>
         </div>
       </div>
 
@@ -21,13 +21,13 @@ const Hero = () => {
             Better Sleep, Better <br className="hidden lg:block" /> Living
           </h1>
 
-          <p className="my-5 text-2xl text-[#f5f4fb]">
+          <p className="my-5 text-2xl text-[var(--color-gray-light)]">
             Contact The Shope <br />
-            <span className="mt-1.5 inline-block rounded bg-[var(--color-backgroundBody)] px-3 py-2 text-xl text-[#d40027]">
+            <span className="mt-1.5 inline-block rounded bg-[var(--color-backgroundBody)] px-3 py-2 text-xl text-[var(--color-primary)]">
               CALL NOW 0404 229 933
             </span>
           </p>
-          <p className="mt-5 mb-16 text-[#f5f4fb]">
+          <p className="mt-5 mb-16 text-[var(--color-gray-light)]">
             25 years of German handmade mattresses now available in the USA <br className="hidden md:block" />
             Experience a mattress made for everybody!
           </p>

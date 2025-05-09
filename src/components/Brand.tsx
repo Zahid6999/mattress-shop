@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Brand = () => {
   return (
     <section
-      className="bg-white pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]"
+      className="bg-[var(--color-white)] pt-14 pb-14 md:pt-16 md:pb-16 lg:pt-[88px] lg:pb-[88px] xl:pt-[100px] xl:pb-[100px]"
       data-aos="fade-up"
       data-aos-anchor-placement="top-center"
       data-aos-offset="-100">
