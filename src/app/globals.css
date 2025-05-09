@@ -47,15 +47,15 @@
   }
 
   h1 {
-    @apply text-5xl leading-tight font-normal tracking-[-2px] sm:text-[55px] md:text-[67px] lg:text-[84px] xl:text-8xl xl:leading-[1.1] xl:tracking-[-2.88px];
+    @apply text-5xl leading-tight font-normal tracking-[-2px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] xl:leading-[1.1] xl:tracking-[-2.88px];
   }
 
   h2 {
-    @apply text-[38px] leading-[1.1] font-normal md:text-[47px] lg:text-[54px] lg:leading-[1.2] xl:text-[64px];
+    @apply text-3xl leading-[1.1] font-normal md:text-4xl lg:text-5xl lg:leading-[1.2] xl:text-6xl;
   }
 
   h3 {
-    @apply text-3xl font-normal lg:text-[42px] lg:leading-[1.2] lg:tracking-[-1.68px] xl:text-[56px];
+    @apply text-3xl font-normal lg:text-4xl lg:leading-[1.2] lg:tracking-[-1.68px] xl:text-5xl;
   }
 
   h4 {
@@ -72,55 +72,6 @@
 
   p {
     @apply text-base font-normal md:text-lg lg:text-xl lg:leading-[1.4];
-  }
-
-  /* Services page specific styles */
-  .services-section {
-    @apply pt-36 pb-14 md:pt-40 md:pb-16 lg:pt-44 lg:pb-[88px] xl:pt-[200px] xl:pb-[100px];
-  }
-
-  .services-header {
-    @apply mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-3 md:mb-20 md:flex-row md:items-center lg:justify-start;
-  }
-
-  .services-badge {
-    @apply mb-3 inline-block rounded-[72px] bg-[var(--color-overlay)] md:mb-4 dark:bg-[var(--color-overlay-dark)];
-  }
-
-  .services-badge-text {
-    @apply inline-block px-[17px] py-2 text-xs font-medium tracking-[0.96px] text-black uppercase;
-  }
-
-  .services-grid {
-    @apply grid grid-cols-1 gap-x-8 gap-y-20 lg:grid-cols-2;
-  }
-
-  .services-card {
-    @apply relative rounded-[12px];
-  }
-
-  .services-image-container {
-    @apply relative max-w-full overflow-hidden rounded-[12px] md:h-[573px];
-  }
-
-  .services-image {
-    @apply h-full w-full cursor-pointer rounded-b-[12px] object-cover object-center transition-transform duration-200 ease-in hover:scale-105;
-  }
-
-  .services-overlay {
-    @apply pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-40 bg-gradient-to-t from-black/90 to-transparent;
-  }
-
-  .services-content {
-    @apply smallMobile:bottom-[34%] absolute left-6 z-20 sm:bottom-[24%];
-  }
-
-  .services-features {
-    @apply mt-3.5 grid max-w-[380px] grid-cols-1 sm:grid-cols-2 [&>*:not(:last-child)]:mb-1;
-  }
-
-  .services-feature-item {
-    @apply inline-flex items-center gap-1 text-[var(--color-gray-dark)]/80;
   }
 
   em {

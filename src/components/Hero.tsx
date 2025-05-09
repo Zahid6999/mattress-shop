@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Hero = () => {
   return (
     <section className="relative flex min-h-screen justify-center overflow-hidden bg-white bg-[url('/images/hero-banner.jpg')] bg-cover bg-center bg-no-repeat pt-[40%] sm:pt-[30%] lg:pt-[25%] xl:pt-[20%] 2xl:pt-[13%]">
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/55 to-transparent" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/70 via-black/60 to-transparent" />
       <div>
         {/* Save 20% Badge */}
         <div
@@ -21,15 +21,15 @@ const Hero = () => {
             Better Sleep, Better <br className="hidden lg:block" /> Living
           </h1>
 
-          <p className="my-5 text-2xl text-[var(--color-gray-light)]">
-            Contact The Shope <br />
-            <span className="mt-1.5 inline-block rounded bg-[var(--color-backgroundBody)] px-3 py-2 text-xl text-[var(--color-primary)]">
+          <p className="my-8 text-2xl text-[var(--color-gray-light)]">
+            <span className="inline-block rounded bg-[var(--color-backgroundBody)] px-3 py-2 text-xl text-[var(--color-primary)]">
               CALL NOW 0404 229 933
             </span>
           </p>
-          <p className="mt-5 mb-16 text-[var(--color-gray-light)]">
-            25 years of German handmade mattresses now available in the USA <br className="hidden md:block" />
-            Experience a mattress made for everybody!
+          <p className="mx-auto mt-5 mb-7 max-w-3xl text-[17px] text-[var(--color-gray-light)]">
+            Proudly serving the Territory for over 10 years, Mattress By Appointment is your trusted, family-owned
+            bedding store. Experience our BedMatch technology and explore a curated range of over 80 mattresses—all
+            tailored to your sleep needs.
           </p>
 
           <ul className="flex flex-col items-center justify-center gap-6 md:flex-row">
